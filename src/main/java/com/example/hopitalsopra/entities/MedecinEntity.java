@@ -26,6 +26,9 @@ public class MedecinEntity {
     @JoinColumn(name = "id_medecin")
     List<RdvEntity> list_rdv;
 
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_medecin")
+    List<TarifEntiy> tarifs;
 
     public List<RdvEntity> getList_rdv() {
         return list_rdv;
